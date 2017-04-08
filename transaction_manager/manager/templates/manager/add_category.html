@@ -1,15 +1,36 @@
 {% extends 'manager/base.html' %}
 {% block title %}New Category{% endblock %}
-{% block register_active %}active{% endblock %}
 
 {% block body %}
 <div class="container-fluid">
 
     <div class="row">
+        {% if categories %}
+        <div class="col-sm-12">
+            <h3>Transaction Categories</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cat in categories %}
+                        <tr>
+                            <td>{{ cat.name }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row">
         <div class="col-sm-12 col-md-6">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <h3>Add Transaction Category</h3>
+                    <h3>Add Category</h3>
                     {% if error_message %}
                         <p><strong>{{ error_message }}</strong></p>
                     {% endif %}

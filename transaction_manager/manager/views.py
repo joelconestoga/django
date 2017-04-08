@@ -86,7 +86,12 @@ def add_category(request):
 		category.save()
 		return index(request)
 
-	return render(request, 'manager/add_category.html', {'form': form})
+	context = {
+		'form': form,
+		'categories': Category.objects.all()
+	}
+
+	return render(request, 'manager/add_category.html', context)
 
 
 
