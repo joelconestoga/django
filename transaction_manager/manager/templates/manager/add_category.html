@@ -32,7 +32,7 @@
                 <div class="panel-body">
                     <h3>Add Category</h3>
                     {% if error_message %}
-                        <p><strong>{{ error_message }}</strong></p>
+                        <p class="error_message">{{ error_message }}</p>
                     {% endif %}
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}

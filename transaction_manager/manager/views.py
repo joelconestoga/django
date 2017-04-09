@@ -25,7 +25,7 @@ def log_in(request):
 	user = authenticate(username=username, password=password)
 
 	if user is None:
-		return render(request, 'manager/log_in.html', {'error_message': 'Invalid login'})
+		return render(request, 'manager/log_in.html', {'error_message': 'Invalid login/password.'})
 
 	login(request, user)
 	

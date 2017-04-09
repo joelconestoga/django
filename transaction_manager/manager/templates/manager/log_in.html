@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     <h3>Log In</h3>
                     {% if error_message %}
-                        <p><strong>{{ error_message }}</strong></p>
+                        <p class="error-message">{{ error_message }}</p>
                     {% endif %}
                     <form class="form-horizontal" role="form" action="{% url 'manager:log_in'%}" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
@@ -38,7 +38,7 @@
                     </form>
                 </div>
                 <div class="panel-footer">
-                    Don't have an account? <a href="{% url 'manager:register' %}">Click here</a> to register.
+                    Don't have an account? <a href="{% url 'manager:register' %}">Click here</a> to Register.
                 </div>
             </div>
         </div>
