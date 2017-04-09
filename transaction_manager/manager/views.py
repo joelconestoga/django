@@ -13,6 +13,7 @@ def index(request) :
 	transactions = Transaction.objects.filter(user=request.user)
 	return render(request, 'manager/index.html', {'transactions': transactions})
 
+
 def log_in(request):
 	
 	if request.method != "POST":

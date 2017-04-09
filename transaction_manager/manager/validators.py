@@ -8,7 +8,7 @@ def validate_username(value):
 
 def validate_password(value):
 	if not re.match(r'^[A-z0-9-^_$/\\]{4,}$', value):
-		raise forms.ValidationError("The password must be at least 4 characters long.  A-z, 0-9, ^, -, _, $, /, \\")
+		raise forms.ValidationError("The password must be at least 4 characters long.  A-z, 0-9, ^, -, _, $, /, \\.")
 
 
 def validate_transaction_name(value):
